@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+/*
+ TW4 seems to have issues detecting classes
+ in app/content/actions/*.md; white-listing here
+*/
+@source inline("bg-red-500");
+@source inline("bg-white/80");
+@source inline("text-white");
+@source inline("opacity-0");
+@source inline("backdrop-blur-[3px]");
+
+@layer base {
+  a:not([class]) {
+    @apply underline;
+
+    &:hover {
+      @apply no-underline;
+    }
+  }
+}
+
+@layer component {
+  .content {
+    @apply [&_*:not(h1,h2,h3,h4,h5,h6)+*:not(pre,code,li,blockquote>p,svg),blockquote+pre]:mt-6;
+    @apply [&_h1+p,&_h2+p,&_h3+p,&_h4+p,&_h5+p,&_h6+p]:mt-0.5;
+    @apply [&>p,&_li]:text-lg [&>p]:text-gray-950;
+
+    @apply [&_*+h2,&_*+h3]:mt-8;
+    @apply [&_h2]:font-semibold [&_h2]:text-2xl [&_h2]:text-gray-900;
+    @apply [&_h3]:font-medium [&_h3]:text-xl [&_h3]:text-gray-900;
+    @apply [&_h4]:font-medium [&_h4]:text-lg [&_h4]:text-gray-900;
+
+    @apply [&_ul,&_ol]:mt-2 [&_ul]:list-disc [&_ul,&_ol]:list-outside [&_ul,&_ol]:ml-4.5;
+    @apply [&_ol]:list-decimal;
+
+    @apply [&_pre]:mt-1.25 [&_pre]:px-1.5 [&_pre]:py-2 [&_pre]:ring-2 [&_pre]:ring-offset-0 [&_pre]:ring-gray-50 [&_pre]:border [&_pre]:border-gray-200 [&_pre]:rounded-md [&_pre]:overflow-auto [&_pre]:sm:px-2 [&_pre]:sm:py-3;
+    @apply [&_code]:px-1.25 [&_code]:py-0.5 [&_code]:text-[0.8em] [&_code]:font-medium [&_code]:bg-gray-200/70 [&_code]:rounded-sm;
+    @apply [&_pre>code]:text-base [&_pre>code]:font-normal [&_pre>code]:text-gray-700 [&_pre>code]:bg-transparent;
+
+    @apply [&_strong]:font-semibold;
+
+    @apply [&_table]:w-full [&_table]:text-left [&_table]:text-base;
+    @apply [&_thead]:border-b [&_thead]:border-gray-200;
+    @apply [&_th]:px-2 [&_th]:py-1.5 [&_th]:font-semibold [&_th]:text-gray-800;
+    @apply [&_tbody_tr]:border-b [&_tbody_tr]:border-gray-100;
+    @apply [&_tbody_tr:last-child]:border-0;
+    @apply [&_td]:px-2 [&_td]:py-1.5 [&_td]:text-base [&_td]:sm:text-lg [&_td]:text-gray-800;
+
+    @apply marker:text-gray-800;
+  }
+}

@@ -1,0 +1,125 @@
+<section id="reference" class="content hidden target:block">
+  <%= markdownify do %>
+    ## Reference
+
+    Quick reference of various Attractive.js features.
+
+
+    ### Implicit target
+
+    Attractive.js expects a `data-target` to be defined, otherwise it defaults to the current element, e.g. the element with the `data-action` attribute.
+
+    Example:
+    ```html
+    <body
+      data-action="document@turbo:visit->addClass#loading document@turbo:load->removeClass#loading"
+    >
+      Show loading state during navigation
+    </body>
+    ```
+
+
+    ### Comma separated values
+
+    Some actions support multiple values by separating them with a comma, e.g. `data-action="toggleClass=bg-black,text-white"`. These actions support multiple values:
+
+    - `addClass`
+    - `removeClass`
+    - `toggleClass`
+    - `cycleClass`
+    - `cycleAttribute`
+    - `cycleDataAttribute`
+
+
+    ### Events
+
+    Actions run using default event listeners based on HTML element types. Attractive.js automatically assigns appropriate events.
+
+    | Element | Default event |
+    |:------------|:-------------|
+    | `<a>`, `<button>` | `click` |
+    | `<input type="text">` | `input` |
+    | `<input type="checkbox">`, `<input type="radio">` | `change` |
+    | `<input type="submit">`, `<input type="button">` | `click` |
+    | `<select>` | `change` |
+    | `<textarea>` | `input` |
+    | `<form>` | `submit` |
+    | Other elements | `click` |
+
+
+    #### Custom events
+
+    Specify custom events using the arrow syntax: `event->action`.
+
+    ```html
+    <input
+      type="text"
+      data-action="keyup->removeClass#hidden"
+      data-target="#clear-button"
+    >
+    ```
+
+
+    #### Global events
+
+    Listen to window and document events using `window@` or `document@` prefixes.
+
+    ```html
+    <!-- Window events -->
+    <turbo-frame
+      id="notifications"
+      data-action="document@visibilitychange->reload"
+    >
+    </div>
+
+    <span
+      data-action="window@online->removeClass#offline window@offline->addClass#offline"
+      class="status-indicator"
+    >
+    </span>
+
+    <!-- Turbo events -->
+    <div
+      data-action="document@turbo:load->removeClass#skeleton"
+    >
+      Remove skeleton loader after page loads
+    </div>
+
+    <body
+      data-action="document@turbo:visit->addClass#loading document@turbo:load->removeClass#loading"
+    >
+      Show loading state during navigation
+    </body>
+    ```
+
+    Common global events include `window@resize`, `window@scroll`, `document@turbo:load`, and `document@turbo:submit-end`.
+
+
+    ### Nested `data-target` selector
+
+    You are not limited to a singular element when defining `data-target`. A nested selector, like `#form [type=checkbox]` would work as well and would query all checkbox elements within the `#form` selector.
+
+
+    ### Set scope
+
+    Attractive.js is by default enabled to the whole document. You can activate it to a certain element only if needed. For example only on the `#main` element.
+
+    ```javascript
+    Attractive.activate();
+
+    const element = document.querySelector("#main");
+    Attractive.activate({ on: element });
+    ```
+
+
+    ### Selectively enable available actions
+
+    You can enable or disable any Attractive.js action when initializing. For example only enable the `class` and `attribute` actions.
+
+    ```javascript
+    Attractive.activate();
+
+    Attractive.activate({ on: element }).withActions(["class", "attribute"]);
+    ```
+  <% end %>
+</section>

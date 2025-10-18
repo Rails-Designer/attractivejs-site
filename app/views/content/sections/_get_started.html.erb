@@ -1,0 +1,78 @@
+<section id="get-started" class="content hidden target:block">
+  <%= markdownify do %>
+    ## Get started
+
+    Attractive.js works by defining a `data-action` and a `data-target` attribute (by default, the action applies to the element itself) to an element. The syntax for the `data-action` attribute is most commonly `action#value`. `data-target` accepts anything that can be passed to `querySelectorAll()`. Like this:
+    ```html
+    <p id="door">
+      Paint me black.
+    </p>
+
+    <button data-action="toggleClass#bg-black" data-target="#door">
+      Paint it black
+    </button>
+    ```
+
+    Upon clicking the button, the `bg-black` CSS class will be toggled (added, then removed) to the `p#door` element. There are a small dozen other actions, like `addAttribute`, `copy` and `scrollTo`. [View them all](#actions).
+
+
+    ## Installation
+
+    You can use Attractive.js either through a CDN, via NPM or importmap-rails.
+
+
+    ### Using a CDN
+
+    ```html
+    <head>
+      <script defer src="https://cdn.jsdelivr.net/npm/attractive.js"></script>
+    </head>
+    ```
+
+    And you are good to go! Optionally configure as needed:
+    ```html
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // default usage (document as root)
+        Attractive.activate();
+
+        // selected element as root
+        const element = document.querySelector("#main");
+        Attractive.activate({ on: element });
+
+        // only with selected actions
+        Attractive.activate({ on: element }).withActions(["class", "attribute"]);
+      });
+    </script>
+    ```
+
+    ### Via NPM/importmap
+
+    ```bash
+    npm install attractive.js
+    ```
+
+    Using importmap-rails
+    ```
+    ./bin/importmap pin attractive.js
+    ```
+
+    Then import `Attractive` into the apps' entrypoint (e.g. `app/javascript/application.js`):
+    ```javascript
+    import Attractive from "attractivejs";
+    ```
+
+    Optionally configure as needed:
+    ```javascript
+    // default usage (document as root)
+    Attractive.activate();
+
+    // selected element as root
+    const element = document.getElementById("main");
+    Attractive.activate({ on: element });
+
+    // only with selected actions
+    Attractive.activate({ on: element }).withActions(["class", "attribute"]);
+    ```
+  <% end %>
+</section>

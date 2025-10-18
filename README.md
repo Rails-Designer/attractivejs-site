@@ -1,6 +1,6 @@
-# My New Site
+# Attractive.js site/documentation
 
-TBD
+Documentation site for [Attractive.js](https://github.com/Rails-Designer/attractive.js).
 
 
 ## Development

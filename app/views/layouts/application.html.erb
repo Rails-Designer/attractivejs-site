@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <%= meta_tags %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <%= yield :head %>
 
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <%= render partial: "shared/favicons" %>
 
     <%= stylesheet_link_tag :app %>
+    <script defer src="https://cdn.jsdelivr.net/npm/attractive.js"></script>
   </head>
   <body>
     <%= yield %>

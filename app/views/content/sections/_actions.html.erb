@@ -1,0 +1,37 @@
+<section id="actions" data-category="attribute" class="hidden target:flex flex-col gap-y-2">
+  <h2 class="font-semibold text-2xl text-gray-900">Actions</h2>
+
+  <nav class="sticky top-0 p-2 flex gap-2 bg-white/70 backdrop-blur-sm [scrollbar-width:none] overflow-x-auto [mask-image:linear-gradient(to_right,transparent,black_20px,black_calc(100%-1rem),transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_1rem,black_calc(100%-1rem),transparent)]">
+    <%= safe_join Content::Action::CATEGORIES.map { tag.button it.humanize, data: { action: "addDataAttribute#category=#{it.parameterize}", target: "#actions"}, class: "block shrink-0 px-3 py-0.5 text-sm font-medium text-gray-800 rounded-full border border-gray-950 transition cursor-pointer hover:border-gray-100" } %>
+  </nav>
+
+  <% Content::Action.all.group_by(&:category).each do |category, resources| %>
+    <style>#actions[data-category="<%= category.parameterize %>"] #<%= category.parameterize %> { display: flex; }</style>
+
+    <ul id="<%= category.parameterize %>" class="hidden flex-col gap-y-8">
+      <% resources.sort_by(&:order).each do |resource| %>
+        <li class="p-2 border border-gray-200 rounded-md">
+          <div class="grid grid-cols-6 gap-4">
+            <div class="col-span-6 px-2 py-1 max-h-60 bg-gray-50 overflow-auto rounded-l-sm lg:col-span-3">
+              <%= markdownify resource.code -%>
+            </div>
+
+            <div class="
+              col-span-6 p-2
+              border border-gray-100 rounded-r-sm
+              lg:col-span-3
+              *:text-sm
+              [&_input]:w-full [&_input]:px-2 [&_input]:py-1 [&_input]:border [&_input]:border-gray-300 [&_input]:rounded-sm
+              [&_select]:w-full [&_select]:px-2 [&_select]:py-1 [&_select]:border [&_select]:border-gray-300 [&_select]:rounded-sm
+              [&_button]:px-3 [&_button]:py-1 [&_button]:font-normal [&_button]:text-gray-950 [&_button]:bg-gray-400 [&_button]:border [&_button]:border-gray-600 [&_button]:rounded-md
+            ">
+              <%== resource.content %>
+            </div>
+          </div>
+
+          <%= tag.div markdownify(resource.description), class: "w-full mx-2 mt-1 text-xs font-medium text-gray-400" if resource.description.present? %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>
