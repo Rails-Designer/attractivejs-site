@@ -11,7 +11,7 @@ description: Allows to reset a form even when the button is _outside_ of the for
   Reset form
 </button>
 
-<form id="reset-form" method="post" action="#" class="p-2 border border-gray-100 rounded-sm">
+<form id="reset-form" method="get" action="/#actions" class="p-2 border border-gray-100 rounded-sm">
   <label for="email">Email</label>
   <input type="email" placeholder="Enter something to see it reset again">
 

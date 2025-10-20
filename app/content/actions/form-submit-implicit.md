@@ -4,7 +4,7 @@ order: 2
 description: This add `?framework=*` to the url since the form has `method=get`.
 ---
 
-<form id="preferences" method="get" action="#">
+<form id="preferences" method="get" action="/#actions" class="p-2 border border-gray-100 rounded-sm">
   <label for="framework">Framework (submits form on select)</label>
 
   <select

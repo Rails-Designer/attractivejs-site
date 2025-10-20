@@ -4,7 +4,7 @@ order: 3
 description: Use `data-submit-delay="n"` (where `n` is in `ms`) to add a debounce/delay before submit. This example uses `2000ms`.
 ---
 
-<form id="more-preferences" method="get" action="#">
+<form id="more-preferences" method="get" action="/#actions" class="p-2 border border-gray-100 rounded-sm">
   <label for="framework">Framework (submits form on select)</label>
 
   <select
