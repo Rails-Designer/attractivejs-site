@@ -19,7 +19,7 @@ description: A light-weight library for declarative DOM actions using data attri
   </div>
 </section>
 
-<div class="max-w-3xl mx-auto px-2 py-12 *:text-xl *:text-gray-900 [&_p+p]:mt-8 md:py-72 lg:py-96 *:md:text-4xl/12">
+<div class="max-w-3xl mx-auto px-2 py-12 *:font-light *:text-xl *:text-gray-900 [&_p+p]:mt-8 md:py-72 lg:py-96 *:md:text-4xl/12">
   <p>
     99% of static sites and server-rendered apps don't need heavy frameworks. Modern HTML and CSS are powerful, but sometimes you just need a touch of interactivity.
   </p>
@@ -31,7 +31,7 @@ description: A light-weight library for declarative DOM actions using data attri
 
 <div class="flex flex-col gap-y-6 max-w-3xl mx-auto px-2 py-12">
   <nav class="flex gap-x-4 md:gap-x-6">
-    <%= safe_join ["Get started", "Actions", "Reference"].map { link_to it, root_path(anchor: it.parameterize), class: "block px-7 py-3 text-lg font-normal text-gray-800 rounded-full border-2 border-gray-950 transition cursor-pointer hover:border-gray-100" } %>
+    <%= safe_join ["Get started", "Actions", "Reference"].map { link_to it, root_path(anchor: it.parameterize), class: "block px-3 py-1 text-sm font-normal text-gray-800 rounded-full border border-gray-950 transition cursor-pointer hover:border-gray-100 md:px-7 md:py-3 md:text-base lg:text-lg md:border-2" } %>
   </nav>
 
   <%= render "content/sections/get_started" %>
