@@ -5,11 +5,13 @@ class Content::Action < Perron::Resource
     attribute
     class
     clipboard
+    confirm
     data_attribute
     dialog
     Form
     intersection
     reload
+    request
     scroll_to
   ]
 
