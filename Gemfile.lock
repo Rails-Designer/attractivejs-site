@@ -295,7 +295,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  commonmarker
+  commonmarker (~> 2.6.0)
   debug
   perron!
   propshaft
