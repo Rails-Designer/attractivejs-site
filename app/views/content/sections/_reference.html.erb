@@ -89,6 +89,16 @@
     Common events: `window@resize`, `window@scroll`, `window@online`, `window@offline`, `document@DOMContentLoaded`, `document@turbo:load`, `document@turbo:before-visit`.
 
 
+    ### Modifiers
+
+    Use modifiers, using the colon syntax, to control when actions execute. There are two available modifiers:
+
+    - `:mounted` (“aliased” to `now`): when element is (programmatically) added to the DOM;
+    - `:whenVisible`: when element enters viewport.
+
+    Example: `<li data-action="element#remove:mounted" data-remove-delay="6000">Profile updated</li>`.
+
+
     ### Nested `data-target` selector
 
     You are not limited to a singular element when defining `data-target`. A nested selector, like `#form [type=checkbox]` would work as well and would query all checkbox elements within the `#form` selector.
