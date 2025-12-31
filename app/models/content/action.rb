@@ -8,7 +8,8 @@ class Content::Action < Perron::Resource
     confirm
     data_attribute
     dialog
-    Form
+    element
+    form
     intersection
     reload
     request

@@ -1,13 +1,13 @@
 ---
 category: clipboard
 order: 3
-description: Use `data-copy-duration="n"` (in ms) to set the duration for the `data-copy-success={true,false}` to be added to the target element. This example has `5000` defined.
+description: Use `data-copy-delay="n"` (in ms) to set the delay before the `data-copy-success={true,false}` gets removed from the target element. This example has `5000` defined.
 ---
 
 <button
   data-action="copy"
   data-target="#access-code"
-  data-copy-duration="5000"
+  data-copy-delay="5000"
 >
   Copy
 </button>

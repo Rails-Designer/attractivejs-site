@@ -1,6 +1,6 @@
 ---
 category: clipboard
-order: 5
+order: 4
 description: When copying to clipboard fails, the attribute `data-copy-success="false"` is added to the target.
 ---
 

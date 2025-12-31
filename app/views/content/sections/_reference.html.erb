@@ -7,15 +7,15 @@
 
     ### Implicit target
 
-    Attractive.js expects a `data-target` to be defined, otherwise it defaults to the current element, e.g. the element with the `data-action` attribute.
+    Attractive.js requires a `data-target` to be defined; if not provided, it defaults to the current element, i.e. the element with the data-action attribute.
 
     Example:
     ```html
-    <body
-      data-action="document@turbo:visit->addClass#loading document@turbo:load->removeClass#loading"
+    <button
+      data-action="addClass#clicked"
     >
-      Show loading state during navigation
-    </body>
+      Add `clicked` class to the button
+    </button>
     ```
 
 
@@ -65,34 +65,28 @@
     Listen to window and document events using `window@` or `document@` prefixes.
 
     ```html
-    <!-- Window events -->
-    <turbo-frame
-      id="notifications"
-      data-action="document@visibilitychange->reload"
-    >
-    </div>
+    <!-- Auto-dismiss flash messages -->
+    <ul id="flash">
+      <li data-action="document@DOMContentLoaded->element#remove" data-remove-delay="5000">
+        Profile updated successfully
+      </li>
+    </ul>
 
+    <!-- Network status indicator -->
     <span
       data-action="window@online->removeClass#offline window@offline->addClass#offline"
       class="status-indicator"
     >
     </span>
 
-    <!-- Turbo events -->
-    <div
-      data-action="document@turbo:load->removeClass#skeleton"
-    >
-      Remove skeleton loader after page loads
-    </div>
-
+    <!-- Turbo navigation loading state -->
     <body
-      data-action="document@turbo:visit->addClass#loading document@turbo:load->removeClass#loading"
+      data-action="document@turbo:before-visit->addClass#loading document@turbo:load->removeClass#loading"
     >
-      Show loading state during navigation
     </body>
     ```
 
-    Common global events include `window@resize`, `window@scroll`, `document@turbo:load`, and `document@turbo:submit-end`.
+    Common events: `window@resize`, `window@scroll`, `window@online`, `window@offline`, `document@DOMContentLoaded`, `document@turbo:load`, `document@turbo:before-visit`.
 
 
     ### Nested `data-target` selector
