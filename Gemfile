@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "commonmarker", "~> 2.6.0"
+gem "commonmarker", "~> 2.6.2", force_ruby_platform: true
 gem "perron", github: "Rails-Designer/perron"
 gem "propshaft"
 gem "puma", ">= 5.0"
