@@ -10,7 +10,6 @@ class Content::Action < Perron::Resource
     dialog
     element
     form
-    intersection
     reload
     request
     scroll_to
