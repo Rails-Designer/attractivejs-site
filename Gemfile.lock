@@ -89,8 +89,6 @@ GEM
     base64 (0.3.0)
     bigdecimal (4.0.1)
     builder (3.3.0)
-    commonmarker (2.6.2)
-      rb_sys (~> 0.9)
     concurrent-ruby (1.3.6)
     connection_pool (3.0.2)
     crass (1.0.6)
@@ -212,13 +210,11 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
-    rake-compiler-dock (1.9.1)
-    rb_sys (0.9.117)
-      rake-compiler-dock (= 1.9.1)
     rdoc (7.1.0)
       erb
       psych (>= 4.0.0)
       tsort
+    redcarpet (3.6.1)
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
@@ -292,15 +288,14 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  commonmarker (~> 2.6.2)
   debug
   perron!
   propshaft
   puma (>= 5.0)
   rails (~> 8.1.0)
+  redcarpet (~> 3.6.1)
   rubocop-rails-omakase
   tailwindcss-rails (~> 4.3)
-  tzinfo-data
 
 BUNDLED WITH
    2.7.0
