@@ -34,7 +34,7 @@
     @apply [&_ul,&_ol]:mt-2 [&_ul]:list-disc [&_ul,&_ol]:list-outside [&_ul,&_ol]:ml-4.5;
     @apply [&_ol]:list-decimal;
 
-    @apply [&_pre]:mt-1.25 [&_pre]:px-1.5 [&_pre]:py-2 [&_pre]:ring-2 [&_pre]:ring-offset-0 [&_pre]:ring-gray-50 [&_pre]:border [&_pre]:border-gray-200 [&_pre]:rounded-md [&_pre]:overflow-auto [&_pre]:sm:px-2 [&_pre]:sm:py-3;
+    @apply [&_pre]:mt-1.25 [&_pre]:px-1.5 [&_pre]:py-2 [&_pre]:bg-gray-50 [&_pre]:border [&_pre]:border-gray-200 [&_pre]:rounded-md [&_pre]:overflow-auto [&_pre]:sm:px-2 [&_pre]:sm:py-3;
     @apply [&_code]:px-1.25 [&_code]:py-0.5 [&_code]:text-[0.8em] [&_code]:font-medium [&_code]:bg-gray-200/70 [&_code]:rounded-sm;
     @apply [&_pre>code]:text-base [&_pre>code]:font-normal [&_pre>code]:text-gray-700 [&_pre>code]:bg-transparent;
 

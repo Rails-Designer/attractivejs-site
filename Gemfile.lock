@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Rails-Designer/perron.git
-  revision: 56ea3535e2c5a60d8e5eb8b68bb125a7c9796558
+  revision: 3e8bd5e41a39b5c44de1058bd04cc64a5ac2b765
   specs:
     perron (0.17.0)
       csv
@@ -218,6 +218,7 @@ GEM
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
+    rouge (4.7.0)
     rubocop (1.81.6)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -294,6 +295,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.1.0)
   redcarpet (~> 3.6.1)
+  rouge (~> 4.7)
   rubocop-rails-omakase
   tailwindcss-rails (~> 4.3)
 

@@ -3,6 +3,7 @@
     ## Get started
 
     Attractive.js works by defining a `data-action` and a `data-target` attribute (by default, the action applies to the element itself) to an element. The syntax for the `data-action` attribute is most commonly `action#value`. `data-target` accepts anything that can be passed to `querySelectorAll()`. Like this:
+
     ```html
     <p id="door">
       Paint me black.
@@ -30,6 +31,7 @@
     ```
 
     And you are good to go! Optionally configure as needed:
+
     ```html
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -53,16 +55,19 @@
     ```
 
     Using importmap-rails
+
     ```
     ./bin/importmap pin attractivejs
     ```
 
     Then import `Attractive` into the apps' entrypoint (e.g. `app/javascript/application.js`):
+
     ```javascript
     import Attractive from "attractivejs";
     ```
 
     Optionally configure as needed:
+
     ```javascript
     // default usage (document as root)
     Attractive.activate();
