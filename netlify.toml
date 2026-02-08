@@ -3,7 +3,7 @@
   PERRON_PROTOCOL = "https"
 
 [build]
-  command = "bin/rails perron:build"
+  command = "bundle install && bin/rails perron:build"
   publish = "output"
 
   [build.environment]

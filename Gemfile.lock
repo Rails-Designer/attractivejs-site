@@ -1,10 +1,11 @@
 GIT
   remote: https://github.com/Rails-Designer/perron.git
-  revision: 3e8bd5e41a39b5c44de1058bd04cc64a5ac2b765
+  revision: 94fd844bfc8888f7ab6384f8b1fe974cebb6e0fa
   specs:
     perron (0.17.0)
       csv
       json
+      mata (~> 0.8.0)
       psych
       rails (>= 7.2.0)
 
@@ -89,6 +90,12 @@ GEM
     base64 (0.3.0)
     bigdecimal (4.0.1)
     builder (3.3.0)
+    commonmarker (2.6.3-aarch64-linux)
+    commonmarker (2.6.3-arm-linux)
+    commonmarker (2.6.3-arm64-darwin)
+    commonmarker (2.6.3-x86_64-darwin)
+    commonmarker (2.6.3-x86_64-linux)
+    commonmarker (2.6.3-x86_64-linux-musl)
     concurrent-ruby (1.3.6)
     connection_pool (3.0.2)
     crass (1.0.6)
@@ -100,6 +107,14 @@ GEM
     drb (2.2.3)
     erb (6.0.1)
     erubi (1.13.1)
+    ffi (1.17.3-aarch64-linux-gnu)
+    ffi (1.17.3-aarch64-linux-musl)
+    ffi (1.17.3-arm-linux-gnu)
+    ffi (1.17.3-arm-linux-musl)
+    ffi (1.17.3-arm64-darwin)
+    ffi (1.17.3-x86_64-darwin)
+    ffi (1.17.3-x86_64-linux-gnu)
+    ffi (1.17.3-x86_64-linux-musl)
     globalid (1.3.0)
       activesupport (>= 6.1)
     i18n (1.14.8)
@@ -109,9 +124,13 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.18.0)
+    json (2.18.1)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
+    listen (3.10.0)
+      logger
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     loofah (2.25.0)
       crass (~> 1.0.2)
@@ -123,6 +142,9 @@ GEM
       net-pop
       net-smtp
     marcel (1.1.0)
+    mata (0.8.0)
+      listen (~> 3.0)
+      rack (>= 3.0)
     mini_mime (1.1.5)
     minitest (6.0.1)
       prism (~> 1.5)
@@ -159,7 +181,7 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.8.0)
+    prism (1.9.0)
     propshaft (1.3.1)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
@@ -210,15 +232,16 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
+    rb-fsevent (0.11.2)
+    rb-inotify (0.11.1)
+      ffi (~> 1.0)
     rdoc (7.1.0)
       erb
       psych (>= 4.0.0)
       tsort
-    redcarpet (3.6.1)
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
-    rouge (4.7.0)
     rubocop (1.81.6)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -289,13 +312,12 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  commonmarker (~> 2.6)
   debug
   perron!
   propshaft
   puma (>= 5.0)
   rails (~> 8.1.0)
-  redcarpet (~> 3.6.1)
-  rouge (~> 4.7)
   rubocop-rails-omakase
   tailwindcss-rails (~> 4.3)
 

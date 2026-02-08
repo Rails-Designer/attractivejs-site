@@ -1,4 +1,6 @@
 Perron.configure do |config|
+  config.live_reload = true
+
   config.site_name = "Attractive.js"
 
   config.metadata.title_suffix = "Attractive.js"
@@ -7,5 +9,14 @@ Perron.configure do |config|
 
   config.markdown_options = {
     markdown_options: { tables: true, fenced_code_blocks: true }
+  }
+
+  config.markdown_options = {
+    plugins: {
+      syntax_highlighter: {
+        theme: "tailwindcss-gray-light",
+        path: Rails.root.join("app", "themes").to_s
+      }
+    }
   }
 end
