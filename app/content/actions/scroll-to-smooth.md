@@ -1,6 +1,6 @@
 ---
 category: scroll_to
-order: 1
+position: 1
 description: Other valid options are `instant` and `auto` (which will inherit the value defined in CSS)
 ---
 

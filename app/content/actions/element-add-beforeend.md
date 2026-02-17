@@ -1,6 +1,6 @@
 ---
 category: element
-order: 4
+position: 4
 description: "The added content is pulled from `data-add-source`. It can be a typical HTML element or a template.  Use `data-add-at='*'` to specify where the added items need inserted. Valid options: `beforeend` (default), `beforebegin`, `beforeend`, `afterend`."
 ---
 

@@ -1,6 +1,6 @@
 ---
 category: data_attribute
-order: 2
+position: 2
 ---
 
 <button

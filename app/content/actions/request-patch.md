@@ -1,6 +1,6 @@
 ---
 category: request
-order: 2
+position: 2
 ---
 
 <select name="theme" id="theme" data-action="patch#/preferences">

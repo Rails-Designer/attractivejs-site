@@ -1,6 +1,6 @@
 ---
 category: element
-order: 2
+position: 2
 ---
 
 <button data-action="element#remove" data-target="#removable-item">

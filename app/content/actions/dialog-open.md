@@ -1,6 +1,6 @@
 ---
 category: dialog
-order: 1
+position: 1
 ---
 
 <button data-action="dialog#open" data-target="#message">

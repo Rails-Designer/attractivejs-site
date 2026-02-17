@@ -1,6 +1,6 @@
 ---
 category: class
-order: 4
+position: 4
 ---
 
 <button

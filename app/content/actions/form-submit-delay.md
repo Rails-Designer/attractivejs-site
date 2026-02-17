@@ -1,6 +1,6 @@
 ---
 category: form
-order: 3
+position: 3
 description: Use `data-submit-delay="n"` (where `n` is in `ms`) to add a debounce/delay before submit. This example uses `2000ms`.
 ---
 

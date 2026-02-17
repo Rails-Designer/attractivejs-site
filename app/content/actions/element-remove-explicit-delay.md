@@ -1,6 +1,6 @@
 ---
 category: element
-order: 3
+position: 3
 description: Use `data-remove-delay` to specify after how many ms the element should be removed.
 ---
 

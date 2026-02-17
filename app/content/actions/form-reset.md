@@ -1,6 +1,6 @@
 ---
 category: form
-order: 1
+position: 1
 description: Allows to reset a form even when the button is _outside_ of the form. Only fields _without_ a value are reset.
 ---
 

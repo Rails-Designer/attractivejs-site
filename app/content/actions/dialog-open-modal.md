@@ -1,6 +1,6 @@
 ---
 category: dialog
-order: 2
+position: 2
 description: Use `closedby="any"` to allow close by clicking outside.
 ---
 

@@ -1,5 +1,5 @@
 class Content::Action < Perron::Resource
-  delegate :category, :order, :description, to: :metadata
+  delegate :category, :position, :description, to: :metadata
 
   CATEGORIES = %w[
     attribute
@@ -14,6 +14,10 @@ class Content::Action < Perron::Resource
     request
     scroll_to
   ]
+
+  validates :description, :position, presence: true
+  validates :category, inclusion: { in: CATEGORIES }
+  validates :position, numericality: { greater_than_or_equal_to: 1 }
 
   def code
     <<~MARKDOWN

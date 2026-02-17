@@ -1,6 +1,6 @@
 ---
 category: element
-order: 1
+position: 1
 ---
 
 <button data-action="element#remove">

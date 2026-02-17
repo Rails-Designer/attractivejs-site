@@ -1,6 +1,6 @@
 ---
 category: confirm
-order: 2
+position: 2
 description: Confirm an action by setting `confirm` first
 ---
 

@@ -1,6 +1,6 @@
 ---
 category: clipboard
-order: 3
+position: 3
 description: Use `data-copy-delay="n"` (in ms) to set the delay before the `data-copy-success={true,false}` gets removed from the target element. This example has `5000` defined.
 ---
 

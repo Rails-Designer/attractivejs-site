@@ -1,6 +1,6 @@
 ---
 category: clipboard
-order: 2
+position: 2
 description: A `data-copy-success="true"` attribute/value is added on the target element which is used to add a green border after copied.
 ---
 
