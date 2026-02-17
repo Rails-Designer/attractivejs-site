@@ -5,7 +5,7 @@ position: 3
 
 <button
   data-action="cycleDataAttribute#light=stop,caution,go"
-  data-target="#traffic-light"
+  data-target="traffic-light"
 >
   Cycle traffic light
 </button>

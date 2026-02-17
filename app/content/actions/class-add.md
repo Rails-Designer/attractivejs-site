@@ -5,7 +5,7 @@ position: 1
 
 <button
   data-action="addClass#bg-black"
-  data-target="#door-1"
+  data-target="door-1"
 >
   Paint it black
 </button>

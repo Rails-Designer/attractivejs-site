@@ -6,7 +6,7 @@ description: Allows to reset a form even when the button is _outside_ of the for
 
 <button
   data-action="form#reset"
-  data-target="#reset-form"
+  data-target="reset-form"
 >
   Reset form
 </button>

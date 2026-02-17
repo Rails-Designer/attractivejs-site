@@ -3,18 +3,15 @@ category: attribute
 position: 1
 ---
 
-<button
-  data-action="toggleAttribute#disabled=disabled"
-  data-target="#name"
->
+<button data-action="toggleAttribute#disabled=disabled" data-target="name">
   Toggle disabled State
 </button>
 
-<button data-action="addAttribute#disabled=disabled" data-target="#name">
+<button data-action="addAttribute#disabled=disabled" data-target="name">
   Add disabled State
 </button>
 
-<button data-action="removeAttribute#disabled=disabled" data-target="#name">
+<button data-action="removeAttribute#disabled=disabled" data-target="name">
   Remove disabled State
 </button>
 

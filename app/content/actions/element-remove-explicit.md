@@ -3,7 +3,7 @@ category: element
 position: 2
 ---
 
-<button data-action="element#remove" data-target="#removable-item">
+<button data-action="element#remove" data-target="removable-item">
   Remove target element
 </button>
 

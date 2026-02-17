@@ -6,7 +6,7 @@ description: A `data-copy-success="true"` attribute/value is added on the target
 
 <button
   data-action="copy"
-  data-target="#share-link"
+  data-target="share-link"
 >
   Copy
 </button>

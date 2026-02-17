@@ -11,7 +11,7 @@ description: Use `data-submit-delay="n"` (where `n` is in `ms`) to add a debounc
     id="framework"
     name="framework"
     data-action="form#submit"
-    data-target="#more-preferences"
+    data-target="more-preferences"
     data-submit-delay="2000"
   >
     <option value="">Choose your JS library</option>

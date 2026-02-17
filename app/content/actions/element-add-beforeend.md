@@ -6,7 +6,7 @@ description: "The added content is pulled from `data-add-source`. It can be a ty
 
 <button
   data-action="element#add"
-  data-target="#list-1"
+  data-target="list-1"
   data-add-source="#item-template"
 >
   Add item

@@ -5,7 +5,7 @@ position: 4
 
 <button
   data-action="toggleClass#bg-black,text-white"
-  data-target="#door-4"
+  data-target="door-4"
 >
   Paint it black with white
 </button>

@@ -4,7 +4,7 @@ position: 2
 description: Use `closedby="any"` to allow close by clicking outside.
 ---
 
-<button data-action="dialog#openModal" data-target="#with-backdrop">
+<button data-action="dialog#openModal" data-target="with-backdrop">
   View dialog with backdrop
 </button>
 

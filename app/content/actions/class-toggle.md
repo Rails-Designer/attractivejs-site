@@ -5,7 +5,7 @@ position: 3
 
 <button
   data-action="toggleClass#bg-black"
-  data-target="#door-3"
+  data-target="door-3"
 >
   Paint it back
 </button>

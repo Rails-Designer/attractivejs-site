@@ -11,7 +11,7 @@ description: This add `?framework=*` to the url since the form has `method=get`.
     id="framework"
     name="framework"
     data-action="form#submit"
-    data-target="#preferences"
+    data-target="preferences"
   >
     <option value="">Choose your JS library</option>
     <option value="attractive">attractive.js</option>

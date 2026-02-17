@@ -5,7 +5,7 @@ position: 2
 
 <button
   data-action="toggleAttribute#open"
-  data-target="#details"
+  data-target="details"
 >
   Toggle open
 </button>

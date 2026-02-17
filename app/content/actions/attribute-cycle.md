@@ -5,7 +5,7 @@ position: 3
 
 <button
   data-action="cycleAttribute#type=password,text"
-  data-target="#password"
+  data-target="password"
 >
   View password
 </button>

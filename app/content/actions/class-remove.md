@@ -5,7 +5,7 @@ position: 2
 
 <button
   data-action="removeClass#bg-black"
-  data-target="#door-2"
+  data-target="door-2"
 >
   Remove black paint
 </button>

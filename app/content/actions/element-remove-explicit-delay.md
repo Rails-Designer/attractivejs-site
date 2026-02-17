@@ -6,7 +6,7 @@ description: Use `data-remove-delay` to specify after how many ms the element sh
 
 <button
   data-action="element#remove"
-  data-target="#delayed-item"
+  data-target="delayed-item"
   data-remove-delay="2000"
 >
   Remove after 2 seconds

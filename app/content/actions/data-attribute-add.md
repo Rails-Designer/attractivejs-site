@@ -5,7 +5,7 @@ position: 1
 
 <button
   data-action="addDataAttribute#tab=1"
-  data-target="#tabs"
+  data-target="tabs"
 >
   First tab
 </button>

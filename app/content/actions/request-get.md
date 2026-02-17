@@ -7,7 +7,7 @@ description: When loading `data-request-busy="true"` is added, and upon success 
 <button
   type="button"
   data-action="get#/"
-  data-target="#content"
+  data-target="content"
 >
   Load this homepage below
 </button>

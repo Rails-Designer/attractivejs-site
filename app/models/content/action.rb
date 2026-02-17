@@ -15,7 +15,6 @@ class Content::Action < Perron::Resource
     scroll_to
   ]
 
-  validates :description, :position, presence: true
   validates :category, inclusion: { in: CATEGORIES }
   validates :position, numericality: { greater_than_or_equal_to: 1 }
 

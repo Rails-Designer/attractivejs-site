@@ -5,7 +5,7 @@ position: 2
 
 <button
   data-action="toggleDataAttribute#status=busy"
-  data-target="#bee-house"
+  data-target="bee-house"
 >
   Toggle busy status
 </button>
