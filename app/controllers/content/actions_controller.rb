@@ -1,5 +1,5 @@
 class Content::ActionsController < ApplicationController
   def show
-    render plain: ""
+    render plain: nil
   end
 end

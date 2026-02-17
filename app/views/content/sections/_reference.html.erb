@@ -7,14 +7,12 @@
 
     ### Implicit target
 
-    Attractive.js requires a `data-target` to be defined; if not provided, it defaults to the current element, i.e. the element with the data-action attribute.
+    Attractive.js assumes a `data-target` to be defined; if not provided, it defaults to the current element, i.e. the element with the data-action attribute.
 
     Example:
 
     ```html
-    <button
-      data-action="addClass#clicked"
-    >
+    <button data-action="addClass#clicked">
       Add `clicked` class to the button
     </button>
     ```
@@ -56,7 +54,7 @@
     <input
       type="text"
       data-action="keyup->removeClass#hidden"
-      data-target="#clear-button"
+      data-target="clear-button"
     >
     ```
 
@@ -100,9 +98,9 @@
     Example: `<li data-action="element#remove:mounted" data-remove-delay="6000">Profile updated</li>`.
 
 
-    ### Nested `data-target` selector
+    ### Nested `data-targets` selector
 
-    You are not limited to a singular element when defining `data-target`. A nested selector, like `#form [type=checkbox]` would work as well and would query all checkbox elements within the `#form` selector.
+    You are not limited to a singular element when defining `data-targets`. A nested selector, like `#form [type=checkbox]` would work as well and would query all checkbox elements within the `#form` selector.
 
 
     ### Set scope

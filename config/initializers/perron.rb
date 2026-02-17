@@ -8,10 +8,6 @@ Perron.configure do |config|
   config.metadata.author = "Rails Designer"
 
   config.markdown_options = {
-    markdown_options: { tables: true, fenced_code_blocks: true }
-  }
-
-  config.markdown_options = {
     plugins: {
       syntax_highlighter: {
         theme: "tailwindcss-gray-light",
